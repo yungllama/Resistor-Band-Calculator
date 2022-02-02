@@ -1,0 +1,476 @@
+////////////////////////////////
+/*
+This code was written by Lamaria aka yungllama
+This code will calculate the value of your resistor value
+*/
+////////////////////////////////
+#include <iostream>
+
+using namespace std;
+int bandtotal;
+string color;
+int colorvalue;
+int color1, color2, color3, color4, color5, color6;
+
+
+void findingcolor ()
+{
+  if (color == "black")
+    {
+      colorvalue = 0;
+    }
+    else if (color == "brown")
+    {
+      colorvalue = 1;
+    }
+    else if (color == "red")
+    {
+      colorvalue = 2;
+    }
+    else if (color == "orange")
+    {
+      colorvalue = 3;
+    }
+    else if (color == "yellow")
+    {
+      colorvalue = 4;
+    }
+    else if (color == "green")
+    {
+      colorvalue = 5;
+    }
+    else if (color == "blue")
+    {
+      colorvalue = 6;
+    }
+    else if (color == "violet")
+    {
+      colorvalue = 7;
+    }
+    else if (color == "grey")
+    {
+      colorvalue = 8;
+    }
+    else if (color == "white")
+    {
+      colorvalue = 9;
+    }
+    else if (color == "gold")
+    {
+      colorvalue = 10;
+    }
+    else if (color == "silver")
+    {
+      colorvalue = 11;
+    }
+    else if (color == "none")
+    {
+      colorvalue = 12;
+    }
+} 
+
+void
+findingthreebandvalue ()
+{
+  if (color3 == 0)
+    {
+      cout << "The total resistance is " << color1 << color2 << "ohms";	//multiplier=black=x1
+    }
+    else if (color3 == 1)
+    {
+      cout << "The total resistance is " << color1 << color2 << "0ohms";	//multiplier=brown=x10
+    }
+    else if (color3 == 2)
+    {
+      cout << "The total resistance is " << color1 << color2 << "00ohms";	//multiplier=red=x100 
+    }
+    else if (color3 == 3)
+    {
+      cout << "The total resistance is " << color1 << color2 << "000ohms";	//multiplier=orange=x1k 
+    }
+    else if (color3 == 4)
+    {
+      cout << "The total resistance is " << color1 << color2 << "0kohms";	//multiplier=yellow=x10k
+    }
+    else if (color3 == 5)
+    {
+      cout << "The total resistance is " << color1 << color2 << "00kohms";	//multiplier=green=x100k
+    }
+    else if (color3 == 6)
+    {
+      cout << "The total resistance is " << color1 << color2 << "Mohms";	//multiplier=blue=x1M   
+    }
+    else if (color3 == 7)
+    {
+      cout << "The total resistance is " << color1 << color2 << "0Mohms";	//multiplier=violet=x10M
+    }
+    else if (color3 == 8)
+    {
+      cout << "The total resistance is " << color1 << color2 << "00Mohms";	//multiplier=grey=x100M
+    }
+    else if (color3 == 9)
+    {
+      cout << "The total resistance is " << color1 << color2 << "Gohms";	//multiplier=white=x1G 
+    }
+}
+
+void
+findingfourbandvalue ()
+{
+  findingthreebandvalue ();
+
+  if (color4 == 1)
+    {
+      cout << " with a 1% Tolerance";
+    }
+    else if (color4 == 2)
+    {
+      cout << " with a 2% Tolerance";
+    }
+    else if (color4 == 5)
+    {
+      cout << " with a 0.5% Tolerance";
+    }
+    else if (color4 == 6)
+    {
+      cout << " with a 0.25% Tolerance";
+    }
+    else if (color4 == 7)
+    {
+      cout << " with a 0.1% Tolerance";
+    }
+    else if (color4 == 8)
+    {
+      cout << " with a 0.05% Tolerance";
+    }
+    else if (color4 == 10)
+    {
+      cout << " with a 5% Tolerance";
+    }
+    else if (color4 == 11)
+    {
+      cout << " with a 10% Tolerance";
+    }
+    else if (color4 == 12)
+    {
+      cout << " with a 20% Tolerance";
+    }
+}
+
+
+
+void findingfourmultiplier ()
+{
+  if (color4 == 0)
+    {
+      cout << "ohms";		//multiplier=black=x1   
+    }
+    if (color4 == 1)
+    {
+      cout << "0ohms";		//multiplier=brown=x10  
+    }
+    else if (color4 == 2)
+    {
+      cout << "00ohms";		//multiplier=red=x100
+    }
+    else if (color4 == 3)
+    {
+      cout << "kohms";		//multiplier=orange=x1k
+    }
+    else if (color4 == 4)
+    {
+      cout << "0kohms";		//multiplier=yellow=x10k 
+    }
+    else if (color4 == 5)
+    {
+      cout << "00kohms";	//multiplier=green=x100k   
+    }
+    else if (color4 == 6)
+    {
+      cout << "Mohms";		//multiplier=blue=x1M
+    }
+    else if (color4 == 7)
+    {
+      cout << "0Mohms";		//multiplier=violet=x10M
+    }
+    else if (color4 == 8)
+    {
+      cout << "00Mohms";	//multiplier=grey=x100M
+    }
+    else if (color4 == 9)
+    {
+      cout << "Gohms";		//multiplier=white=x1G   
+    }
+
+
+}
+
+
+void
+findingfivetolerance ()
+{
+  if (color5 == 1)
+    {
+      cout << " with a 1% tolerance";
+    }
+    else if (color5 == 2)
+    {
+      cout << " with a 2% tolerance";
+    }
+    else if (color5 == 5)
+    {
+      cout << " with a 0.5% tolerance";
+    }
+    else if (color5 == 6)
+    {
+      cout << " with a 0.25% tolerance";
+    }
+    else if (color5 == 7)
+    {
+      cout << " with a 0.1% Tolerance";
+    }
+    else if (color5 == 8)
+    {
+      cout << " with a 0.05% tolerance";
+    }
+    else if (color5 == 10)
+    {
+      cout << " with a 5% tolerance";
+    }
+    else if (color5 == 11)
+    {
+      cout << " with a 10% tolerance";
+    }
+    else if (color5 == 12)
+    {
+      cout << " with a 20% tolerance";
+    }
+}
+
+
+
+
+
+
+void
+findingfivebandvalue ()
+{
+  if (color5 == 0)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 1)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 2)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 3)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 4)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 5)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 6)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 7)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 8)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+    else if (color5 == 9)
+    {
+      cout << "The total resistance is " << color1 << color2 << color3;
+    }
+  findingfourmultiplier ();
+  findingfivetolerance ();
+}
+
+
+void
+findingsixbandvalue ()
+{
+
+  findingfivebandvalue ();
+
+  if (color6 == 0)
+    {
+      cout << " and temperature coefficient of 250 ppm/K"<<endl;
+    }
+    else if (color6 == 1)
+    {
+      cout << " and temperature coefficient of 100 ppm/K"<<endl;
+    }
+    else if (color6 == 2)
+    {
+      cout << " and temperature coefficient of 50 ppm/K"<<endl;
+    }
+    else if (color6 == 3)
+    {
+      cout << " and temperature coefficient of 15 ppm/K"<<endl;
+    }
+    else if (color6 == 4)
+    {
+      cout << " and temperature coefficient of 25 ppm/K"<<endl;
+    }
+    else if (color6 == 5)
+    {
+      cout << " and temperature coefficient of 20 ppm/K"<<endl;
+    }
+    else if (color6 == 6)
+    {
+      cout << " and temperature coefficient of 10 ppm/K"<<endl;
+    }
+    else if (color6 == 7)
+    {
+      cout << " and temperature coefficient of 5 ppm/K"<<endl;
+    }
+    else if (color6 == 8)
+    {
+      cout << " and temperature coefficient of 1 ppm/K"<<endl;
+    }
+}
+
+
+
+void menu ()
+{
+cout << "How many bands?" << endl;
+  cin >> bandtotal;
+
+  if (bandtotal == 3)
+    {
+    cout << "Enter the color of the first band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color1 = colorvalue;
+
+    cout << "Enter the color of the second band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color2 = colorvalue;
+
+    cout << "Enter the color of third band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color3 = colorvalue;
+
+   findingthreebandvalue ();
+}
+
+
+  if (bandtotal == 4)
+  {
+    cout << "Enter the color of the first band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color1 = colorvalue;
+
+    cout << "Enter the color of the second band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color2 = colorvalue;
+
+    cout << "Enter the color of third band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color3 = colorvalue;
+
+    cout << "Enter the color of the fourth band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color4 = colorvalue;
+
+   findingfourbandvalue ();
+}
+
+
+
+  if (bandtotal == 5)
+  {
+    cout << "Enter the color of the first band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color1 = colorvalue;
+
+    cout << "Enter the color of the second band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color2 = colorvalue;
+
+    cout << "Enter the color of third band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color3 = colorvalue;
+
+    cout << "Enter the color of the fourth band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color4 = colorvalue;
+
+    cout << "Enter the color of the fifth band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color5 = colorvalue;
+
+   findingfivebandvalue ();
+}
+
+  if (bandtotal == 6)
+  {
+    cout << "Enter the color of the first band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color1 = colorvalue;
+    
+    cout << "Enter the color of the second band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color2 = colorvalue;
+      
+    cout << "Enter the color of third band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color3 = colorvalue;
+      
+    cout << "Enter the color of the fourth band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color4 = colorvalue;
+      
+    cout << "Enter the color of the fifth band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color5 = colorvalue;
+     
+    cout << "Enter the color of the sixth band: " << endl;
+    cin >> color;
+    findingcolor ();
+    color6 = colorvalue;
+    
+   findingsixbandvalue();
+  }
+}
+
+
+
+int
+main ()
+{
+cout << "Welcome to Lamaria's Resistor Band Calculator" << endl;
+    menu ();
+    return 0;
+}
